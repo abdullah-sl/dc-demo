@@ -1,0 +1,21 @@
+{
+    "name": "Ruby 2.5.7",
+    "dockerComposeFile": "docker-compose.yml",
+    "workspaceFolder": "/workspace",
+    "service": "app",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "castwide.solargraph", // Language server for Ruby
+          "groksrc.ruby", // Syntax highlighting
+          "kaiwood.endwise" // Auto-closes Ruby blocks
+        ],
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/bash",
+          "solargraph.diagnostics": true,
+          "solargraph.formatting": true
+        }
+      }
+    },
+    "postCreateCommand": "bundle install"
+  }
